@@ -1,0 +1,436 @@
+@import 'colors';
+@import 'animation';
+
+*,
+* ::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-padding-top: 82px;
+}
+
+body {
+    position: relative;
+    background-color: $bg-color;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.shadow-bg {
+    background-color: rgba(0, 0, 0, .8);
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.underline {
+    margin: 0 auto 40px;
+    width: 60px;
+    height: 4px;
+    background-color: $main-color;
+}
+
+// NAVIGATION //
+
+nav {
+    text-transform: uppercase;
+    z-index: 1;
+    transition: background-color 2s;
+
+    a,
+    i {
+        color: $white;
+    }
+
+    a:hover {
+        color: $main-color;
+    }
+
+    span {
+        color: $main-color;
+    }
+
+    .fa-bars {
+        padding: 10px;
+    }
+
+    .active {
+        color: $main-color;
+    }
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+// NAVIGATION //
+//HEADER//
+
+.header-image {
+    position: relative;
+    height: 100vh;
+    background-image: url('/img/Bengali\ Small.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 0;
+}
+
+.header-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: -10;
+}
+
+.header-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    text-shadow: 3px 3px 5px black;
+    z-index: 5;
+
+    h1 {
+        font-weight: bold;
+    }
+
+    span {
+        color: $main-color;
+    }
+}
+
+.btn-outline-light {
+    text-transform: uppercase;
+}
+
+.fa-chevron-down {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: $white;
+}
+
+//HEADER//
+
+//MAIN//
+
+.aboutus {
+
+    i {
+        margin-top: 20px;
+        font-size: 30px;
+    }
+
+    .aboutus-hover {
+        //transition: color .5s;
+    }
+
+    .aboutus-hover:hover {
+        color: $main-color;
+    }
+
+    .aboutus-card-title {
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+
+    .aboutus-card-text {
+        font-size: 14px;
+    }
+}
+
+.aboutus-hero {
+    position: relative;
+    background-image: url(/img/arcades-small.jpg);
+    background-position: center;
+    background-size: cover;
+    color: $white;
+    z-index: 0;
+
+    .aboutus-bg {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .7);
+        z-index: -5;
+    }
+
+    .aboutus-hero-item {
+        margin: 10px 0;
+
+        i {
+            font-size: 36px;
+        }
+
+        .aboutus-hero-title {
+            font-size: 24px;
+        }
+    }
+}
+
+.portfolio {
+    .carousel-item {
+        position: relative;
+        height: 600px;
+    }
+
+    .carousel-caption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        padding: 40px 0;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .carousel-indicators {
+        padding-bottom: 20px;
+    }
+}
+
+.prices {
+    .prices-box {
+        margin: 20px 10px;
+        padding: 30px;
+        background-color: $white;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, .4);
+        transition: transform .3s;
+
+        h3 {
+            color: $main-color;
+            text-transform: uppercase;
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        i {
+            padding: 0 5px;
+            font-size: 24px;
+        }
+
+        button {
+            padding: 10px 20px;
+            text-transform: uppercase;
+        }
+
+        .price-tag {
+            font-size: 30px;
+            font-weight: bold;
+        }
+    }
+
+    .prices-box:hover {
+        transform: scale(1.05);
+    }
+
+    .prices-info {
+        margin-top: 30px;
+
+        a {
+            text-decoration: none;
+            color: $dark-main;
+        }
+    }
+}
+
+.team {
+
+    position: relative;
+    background-image: url('/img/conference-room-ge1e3b8d8e_1920.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 0;
+
+    .hero-team-bg {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .6);
+        z-index: -10;
+    }
+
+    .card {
+        transition: transform .3s;
+
+        img {
+            height: 300px;
+            object-fit: cover;
+        }
+
+        i {
+            padding: 10px;
+            color: $dark-main;
+        }
+
+        .card-body {
+            height: 160px;
+        }
+    }
+
+    .card:hover {
+        transform: scale(0.96);
+    }
+
+    .hero-team-text {
+        color: $bg-color;
+        z-index: 10;
+    }
+
+    .card-title {
+        margin-bottom: 20px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+//MAIN//
+
+@media (max-width: 346px) {
+    .navbar-brand {
+        font-size: 0.9rem;
+    }
+
+    .header-text {
+        font-size: 0.9rem;
+    }
+
+    .team {
+        .card {
+            img {
+                height: 230px;
+            }
+        }
+    }
+
+}
+
+.achievements {
+
+    i {
+        
+        padding: 10px;
+        font-size: 48px;
+        color: $white;
+        text-shadow: 0 0 5px black;  
+    }
+
+    .achievements-list {
+        padding: 20px 0;
+    }
+
+    .achievement-number {
+        font-size: 22px;
+    }
+
+    .achievement-text {
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+}
+
+.contact {
+    position: relative;
+    background-image: url('/img/skyline-ge2f182aa8_1920.jpg');
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 0;
+    
+    h2 {
+        color: $bg-color;
+        font-weight: bold;
+    }
+
+    .underline {
+        background-color: $bg-color;
+    }
+
+    .contact-bg {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(16, 58, 37, 0.7);
+        z-index: -10;
+    }
+
+    .contact-us {
+        display: flex;
+        align-items: center;
+        color: $white;
+
+        .contact-item {
+            margin: 30px 0;
+            
+                h3 {
+                    margin-bottom: 15px;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                }
+            
+                .social-media {
+                    font-size: 26px;
+
+                    a{
+                        padding: 10px;
+                        color: $white;
+                    }
+
+                    a:hover {
+                        color: $bg-color;
+                    }
+                }
+        }
+    }
+}
+
+@media (max-width: 1210px) {
+    .nav-link {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 640px) {
+    .header-image {
+        background-image: url('/img/Bengali\ Medium.jpg');
+    }
+}
+
+@media (min-width: 992px) {
+    .aboutus-hero {
+        background-image: url('/img/arcades-large.jpg');
+    }
+
+    nav {
+        height: 82px;
+    }
+
+    .prices {
+        .prices-info {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (min-width: 1280px) {
+    .header-image {
+        background-image: url('/img/Bengali\ Large.jpg');
+    }
+}
